@@ -4,36 +4,53 @@
   <title>Coco Pâtisserie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Shells-1 font (fallback included in case browser doesn't load it) -->
+  <style>
+    @font-face {
+      font-family: "Shells-1";
+      src: local("Shells-1"), local("Georgia");
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: "Times New Roman", serif;
+      font-family: "Shells-1", "Cormorant Garamond", serif;
       background: #f7f3ee;
       color: #1a1a1a;
     }
 
     .hero {
-      padding: 120px 20px 80px;
+      padding: 120px 20px 70px;
       text-align: center;
       background: linear-gradient(to bottom, #f2ece4, #f7f3ee);
     }
 
     .brand {
-      font-size: 64px;
+      font-size: 70px;
       letter-spacing: 6px;
       margin: 0;
+      font-style: italic;
+      transition: transform 0.6s ease, letter-spacing 0.6s ease;
+    }
+
+    .brand:hover {
+      transform: scale(1.05);
+      letter-spacing: 10px;
     }
 
     .tagline {
-      max-width: 650px;
+      max-width: 700px;
       margin: 20px auto;
-      font-size: 16px;
-      line-height: 1.7;
+      font-size: 18px;
+      line-height: 1.8;
       font-style: italic;
     }
 
     .button {
-      margin-top: 30px;
+      margin-top: 25px;
       display: inline-block;
       padding: 12px 28px;
       border: 1px solid #1a1a1a;
@@ -41,6 +58,13 @@
       color: #1a1a1a;
       letter-spacing: 2px;
       font-size: 12px;
+      transition: all 0.4s ease;
+    }
+
+    .button:hover {
+      background: #1a1a1a;
+      color: #f7f3ee;
+      transform: translateY(-2px);
     }
 
     .section {
@@ -49,24 +73,34 @@
     }
 
     .title {
-      font-size: 20px;
+      font-size: 22px;
       letter-spacing: 3px;
       margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    .grid {
+      max-width: 900px;
+      margin: auto;
     }
 
     .item {
-      margin: 25px 0;
+      margin: 18px 0;
+      font-size: 18px;
+      transition: transform 0.35s ease, color 0.35s ease;
+      cursor: default;
     }
 
-    .item h3 {
-      font-weight: normal;
-      margin: 0;
+    .item:hover {
+      transform: translateY(-4px);
+      color: #7a6a5a;
     }
 
-    .item p {
-      font-size: 14px;
+    .item span {
+      font-style: italic;
       color: #555;
-      margin: 5px 0 0;
+      display: block;
+      font-size: 15px;
     }
 
     .footer {
@@ -84,36 +118,89 @@
   <div class="hero">
     <h1 class="brand">COCO</h1>
     <p class="tagline">
-      A quiet atelier of pâtisserie inspired by old European kitchens—where time slows,
-      craftsmanship leads, and every creation is composed with restraint, precision, and grace.
+      A Parisian-inspired pâtisserie atelier devoted to timeless French baking traditions,
+      where elegance, restraint, and craftsmanship define every creation.
     </p>
 
-    <a class="button" href="https://wa.me/923248835537">
+    <a class="button" href="https://wa.me/92XXXXXXXXXX">
       PRIVATE ORDER
     </a>
   </div>
 
   <div class="section">
-    <div class="title">SIGNATURE COLLECTION</div>
-
-    <div class="item">
-      <h3>Dark Chocolate Ganache Cake</h3>
-      <p>intense cocoa, layered depth, silk finish</p>
+    <div class="title">Cakes</div>
+    <div class="grid">
+      <div class="item">Chocolate Cake <span>rich cocoa ganache</span></div>
+      <div class="item">Caramel Cake</div>
+      <div class="item">Coffee Cake</div>
+      <div class="item">Peach Cake</div>
+      <div class="item">Marble Cake</div>
+      <div class="item">Seasonal Fruit Cake</div>
     </div>
+  </div>
 
-    <div class="item">
-      <h3>Classic Fudge Brownies</h3>
-      <p>dense, bittersweet, hand-cut precision</p>
+  <div class="section">
+    <div class="title">Cookies</div>
+    <div class="grid">
+      <div class="item">Chocolate Chip Cookies</div>
+      <div class="item">Plain Butter Cookies</div>
+      <div class="item">Chocolate Filled Cookies</div>
+      <div class="item">White Chip Cookies</div>
+      <div class="item">Marble Cookies</div>
     </div>
+  </div>
 
-    <div class="item">
-      <h3>Seasonal Confections</h3>
-      <p>curated weekly, inspired by quiet luxury</p>
+  <div class="section">
+    <div class="title">Cinnamon Rolls</div>
+    <div class="grid">
+      <div class="item">Bon Bon Cinnamon</div>
+      <div class="item">Bon Bon Chocolate</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="title">Buns</div>
+    <div class="grid">
+      <div class="item">Cheese Buns</div>
+      <div class="item">Plain Buns</div>
+      <div class="item">Raisin Buns</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="title">Brownies</div>
+    <div class="grid">
+      <div class="item">Fudge Brownies</div>
+      <div class="item">Marble Brownies</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="title">Muffins</div>
+    <div class="grid">
+      <div class="item">Plain Muffins</div>
+      <div class="item">Vanilla Muffins</div>
+      <div class="item">Caramel Muffins</div>
+      <div class="item">Marble Muffins</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="title">Cupcakes</div>
+    <div class="grid">
+      <div class="item">Chocolate Cupcakes <span>assorted frostings</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="title">Banana Bread</div>
+    <div class="grid">
+      <div class="item">Classic Banana Bread</div>
     </div>
   </div>
 
   <div class="footer">
-    COCO PÂTISSERIE • EST. quietly
+    COCO PÂTISSERIE • PARISIAN INSPIRED ATELIER
   </div>
 
 </body>
