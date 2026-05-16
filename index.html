@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>COCO</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Elegant luxury fonts -->
+  <title>COCO Pâtisserie</title>
+
+  <!-- Luxury Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -21,6 +22,10 @@
       box-sizing:border-box;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       background:#F8E8E3; /* Apricot Pink / Rose White */
       color:#4A2E2A;
@@ -28,160 +33,221 @@
       overflow-x:hidden;
     }
 
-    html{
-      scroll-behavior:smooth;
-    }
-
     /* HERO SECTION */
 
     .hero{
+
       height:100vh;
+
       background-image:
-      linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-      url("Coco Double Chocolate Cake.jpg");
+      linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
+      url("Coco Double Chocolate Cake.png");
 
       background-size:cover;
       background-position:center;
+
       display:flex;
-      align-items:center;
       justify-content:center;
+      align-items:center;
+
       text-align:center;
       padding:20px;
     }
 
     .hero-content{
       color:white;
-      animation:fadeIn 1.8s ease;
+      animation:fadeIn 1.5s ease;
     }
 
     .hero h1{
       font-family:'Cormorant Garamond', serif;
-      font-size:110px;
-      letter-spacing:10px;
-      font-weight:500;
+      font-size:115px;
+      letter-spacing:12px;
       font-style:italic;
+      font-weight:500;
     }
 
     .hero p{
       margin-top:18px;
       font-size:18px;
-      letter-spacing:2px;
+      letter-spacing:3px;
       font-weight:300;
     }
 
     .order-btn{
+
       display:inline-block;
-      margin-top:35px;
+
+      margin-top:38px;
+
       padding:14px 34px;
+
       border:1px solid white;
+
       color:white;
+
       text-decoration:none;
+
       letter-spacing:3px;
+
       font-size:12px;
+
       transition:0.4s ease;
     }
 
     .order-btn:hover{
+
       background:white;
+
       color:#4A2E2A;
+
     }
 
-    /* MENU SECTION */
+    /* MENU */
 
     .menu-section{
+
       width:90%;
-      max-width:1300px;
+      max-width:1350px;
+
       margin:auto;
+
       padding:120px 0;
     }
 
     .section-title{
+
       text-align:center;
+
       margin-bottom:80px;
     }
 
     .section-title h2{
+
       font-family:'Cormorant Garamond', serif;
-      font-size:55px;
+
+      font-size:58px;
+
       font-style:italic;
+
       font-weight:500;
+
       letter-spacing:4px;
     }
 
     .menu-grid{
+
       display:grid;
+
       grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-      gap:50px;
+
+      gap:55px;
     }
 
+    /* CARD */
+
     .card{
-      background:#fff7f3;
+
+      background:#FFF7F3;
+
+      border-radius:20px;
+
       overflow:hidden;
-      border-radius:18px;
+
       transition:0.45s ease;
-      box-shadow:0 8px 30px rgba(0,0,0,0.05);
+
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+
     }
 
     .card:hover{
+
       transform:translateY(-10px);
-      box-shadow:0 15px 40px rgba(0,0,0,0.10);
+
+      box-shadow:0 18px 45px rgba(0,0,0,0.10);
+
     }
 
     .card img{
+
       width:100%;
-      height:340px;
+
+      height:350px;
+
       object-fit:cover;
+
       display:block;
     }
 
     .card-content{
-      padding:28px;
+
+      padding:30px;
     }
 
     .item-name{
+
       font-family:'Cormorant Garamond', serif;
-      font-size:32px;
+
+      font-size:34px;
+
       font-style:italic;
+
       line-height:1.2;
-      margin-bottom:22px;
+
+      margin-bottom:24px;
+
       color:#4A2E2A;
     }
 
     .price-row{
+
       display:flex;
+
       justify-content:space-between;
+
       align-items:center;
-      margin-top:12px;
+
+      margin-top:18px;
     }
 
     .price{
-      font-size:18px;
-      letter-spacing:1px;
+
       color:#7A514A;
+
+      font-size:18px;
+
+      letter-spacing:1px;
     }
 
     /* FOOTER */
 
     .footer{
+
       text-align:center;
+
       padding:70px 20px;
-      font-size:13px;
-      letter-spacing:4px;
+
       color:#7A514A;
+
+      font-size:13px;
+
+      letter-spacing:4px;
     }
 
-    /* ANIMATIONS */
+    /* ANIMATION */
 
     @keyframes fadeIn{
+
       from{
         opacity:0;
-        transform:translateY(30px);
+        transform:translateY(25px);
       }
 
       to{
         opacity:1;
         transform:translateY(0);
       }
+
     }
 
     /* MOBILE */
@@ -211,6 +277,7 @@
     }
 
   </style>
+
 </head>
 
 <body>
@@ -243,7 +310,9 @@
   <section class="menu-section">
 
     <div class="section-title">
+
       <h2>Signature Collection</h2>
+
     </div>
 
     <div class="menu-grid">
@@ -252,7 +321,7 @@
 
       <div class="card">
 
-        <img src="Banana Bread.jpg" alt="Banana Bread">
+        <img src="Banana Bread.png" alt="Banana Bread">
 
         <div class="card-content">
 
@@ -261,7 +330,11 @@
           </div>
 
           <div class="price-row">
-            <div class="price">765/-</div>
+
+            <div class="price">
+              765/-
+            </div>
+
           </div>
 
         </div>
@@ -272,7 +345,7 @@
 
       <div class="card">
 
-        <img src="Chocolate Filled Cookies.jpg" alt="Chocolate Filled Cookies">
+        <img src="Chocolate Filled Cookies.png" alt="Chocolate Filled Cookies">
 
         <div class="card-content">
 
@@ -281,7 +354,11 @@
           </div>
 
           <div class="price-row">
-            <div class="price">270/-</div>
+
+            <div class="price">
+              270/-
+            </div>
+
           </div>
 
         </div>
@@ -292,7 +369,7 @@
 
       <div class="card">
 
-        <img src="Four Cinnamon Rolls.jpg" alt="Four Cinnamon Rolls">
+        <img src="Four Cinnamon Rolls.png" alt="Four Cinnamon Rolls">
 
         <div class="card-content">
 
@@ -301,7 +378,11 @@
           </div>
 
           <div class="price-row">
-            <div class="price">895/-</div>
+
+            <div class="price">
+              895/-
+            </div>
+
           </div>
 
         </div>
@@ -312,7 +393,7 @@
 
       <div class="card">
 
-        <img src="Classic Fudge Brownies.jpg" alt="Classic Fudge Brownies">
+        <img src="Classic Fudge Brownies.png" alt="Classic Fudge Brownies">
 
         <div class="card-content">
 
@@ -321,7 +402,11 @@
           </div>
 
           <div class="price-row">
-            <div class="price">595/-</div>
+
+            <div class="price">
+              595/-
+            </div>
+
           </div>
 
         </div>
@@ -332,7 +417,7 @@
 
       <div class="card">
 
-        <img src="Coco Double Chocolate Cake.jpg" alt="Coco Double Chocolate Cake">
+        <img src="Coco Double Chocolate Cake.png" alt="Coco Double Chocolate Cake">
 
         <div class="card-content">
 
@@ -341,7 +426,11 @@
           </div>
 
           <div class="price-row">
-            <div class="price">1965/-</div>
+
+            <div class="price">
+              1965/-
+            </div>
+
           </div>
 
         </div>
@@ -352,7 +441,7 @@
 
       <div class="card">
 
-        <img src="Coffee Caramel Cake.jpg" alt="Coffee Caramel Cake">
+        <img src="Coffee Caramel Cake.png" alt="Coffee Caramel Cake">
 
         <div class="card-content">
 
@@ -361,18 +450,22 @@
           </div>
 
           <div class="price-row">
-            <div class="price">1965/-</div>
+
+            <div class="price">
+              1965/-
+            </div>
+
           </div>
 
         </div>
 
       </div>
 
-      <!-- White Chip Cookies -->
+      <!-- White Chip Coco Cookies -->
 
       <div class="card">
 
-        <img src="White Chip Coco Cookies.jpg" alt="White Chip Coco Cookies">
+        <img src="White Chip Coco Cookies.png" alt="White Chip Coco Cookies">
 
         <div class="card-content">
 
@@ -381,7 +474,11 @@
           </div>
 
           <div class="price-row">
-            <div class="price">250/-</div>
+
+            <div class="price">
+              250/-
+            </div>
+
           </div>
 
         </div>
@@ -395,8 +492,11 @@
   <!-- FOOTER -->
 
   <div class="footer">
+
     COCO PÂTISSERIE • PRIVATE ORDERS
+
   </div>
 
 </body>
+
 </html>
